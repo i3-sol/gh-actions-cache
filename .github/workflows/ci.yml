@@ -15,6 +15,9 @@ jobs:
       #       */*/node_modules
       #     key: ${{ runner.os }}-${{ hashFiles('**/yarn.lock') }}
 
+      - name: Log node_modules
+        run: cd node_modules && ls
+
       - name: Install packages
         run: yarn install
 
